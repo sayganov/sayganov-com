@@ -1,1 +1,1 @@
-# sayganov-com
+# sayganov.com
