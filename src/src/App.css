@@ -1,0 +1,43 @@
+/* Enhanced styles for minimalistic design */
+body {
+  font-family: 'JetBrains Mono', monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom focus styles for accessibility */
+a:focus-visible {
+  outline: 2px solid rgb(255 255 255 / 0.5);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+  transition-property: color, text-decoration-color, opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+/* Ensure text selection looks good */
+::selection {
+  background-color: rgb(255 255 255 / 0.2);
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(255 255 255 / 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(255 255 255 / 0.3);
+}
