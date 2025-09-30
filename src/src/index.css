@@ -1,6 +1,23 @@
 @import "tailwindcss";
 
-body {
+/* CSS Reset for mobile responsiveness */
+html,
+body,
+#root {
   margin: 0;
   padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  /* Better mobile viewport handling */
+  height: 100vh;
+  height: 100dvh;
+  /* Dynamic viewport height for mobile */
+}
+
+body {
+  /* Prevent horizontal scrolling on mobile */
+  overflow-x: hidden;
 }

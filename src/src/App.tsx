@@ -33,7 +33,7 @@ function App() {
   }
 
   return (
-    <main className="min-h-screen w-full flex items-center justify-center bg-zinc-900 text-white p-4">
+    <main className="min-h-dvh w-full flex items-center justify-center bg-zinc-900 text-white p-4">
       <div className="max-w-2xl mx-auto text-center w-full">
 
         <nav className="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-0 sm:space-x-2">
