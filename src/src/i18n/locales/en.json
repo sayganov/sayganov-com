@@ -1,0 +1,18 @@
+{
+    "navigation": {
+        "linkedin": "LinkedIn",
+        "github": "GitHub",
+        "dev": "DEV",
+        "instagram": "Instagram",
+        "email": "Email"
+    },
+    "cookie": {
+        "notice": "I don't collect cookies. No cookies for you! 🍪",
+        "dismiss": "Dismiss cookie notice"
+    },
+    "languages": {
+        "english": "English",
+        "russian": "Русский",
+        "prerevolutionary": "Дореволюцiонный"
+    }
+}

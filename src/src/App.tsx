@@ -1,6 +1,9 @@
 import './App.css'
 import { useState, useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 import { FaLinkedinIn, FaGithub, FaDev, FaInstagram } from 'react-icons/fa'
+import { HiOutlineMail } from 'react-icons/hi'
+import LanguageSwitcher from './components/LanguageSwitcher'
 
 const navLinkClass =
   'text-white/90 hover:text-white focus:text-white focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-zinc-900 hover:underline underline-offset-4 decoration-2 text-base sm:text-lg font-medium tracking-wide px-3 py-2 sm:px-2 sm:py-1 transition-all duration-200 flex items-center gap-2 min-h-[44px] justify-center sm:justify-start rounded-sm'
@@ -8,6 +11,7 @@ const navLinkClass =
 const dividerClass = 'text-white/30 select-none text-lg hidden sm:block'
 
 function App() {
+  const { t } = useTranslation()
   const [showCookieNotice, setShowCookieNotice] = useState(false)
 
   useEffect(() => {
@@ -45,7 +49,7 @@ function App() {
             aria-label="LinkedIn profile"
           >
             <FaLinkedinIn size={18} className="sm:w-5 sm:h-5" />
-            LinkedIn
+            {t('navigation.linkedin')}
           </a>
           <span className={dividerClass}>•</span>
           <a
@@ -56,7 +60,7 @@ function App() {
             aria-label="GitHub profile"
           >
             <FaGithub size={18} className="sm:w-5 sm:h-5" />
-            GitHub
+            {t('navigation.github')}
           </a>
           <span className={dividerClass}>•</span>
           <a
@@ -67,7 +71,7 @@ function App() {
             aria-label="DEV profile"
           >
             <FaDev size={18} className="sm:w-5 sm:h-5" />
-            DEV
+            {t('navigation.dev')}
           </a>
           <span className={dividerClass}>•</span>
           <a
@@ -78,27 +82,38 @@ function App() {
             aria-label="Instagram profile"
           >
             <FaInstagram size={18} className="sm:w-5 sm:h-5" />
-            Instagram
+            {t('navigation.instagram')}
+          </a>
+          <span className={dividerClass}>•</span>
+          <a
+            href="mailto:georgysay@gmail.com"
+            className={navLinkClass}
+            aria-label="Email me"
+          >
+            <HiOutlineMail size={18} className="sm:w-5 sm:h-5" />
+            {t('navigation.email')}
           </a>
         </nav>
       </div>
 
       {showCookieNotice && (
-        <div className="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-4 sm:max-w-sm bg-zinc-800/90 backdrop-blur-sm border border-white/10 rounded-lg p-4 shadow-lg">
+        <div className="fixed bottom-16 left-4 right-4 sm:bottom-4 sm:left-auto sm:right-4 sm:max-w-sm bg-zinc-800/90 backdrop-blur-sm border border-white/10 rounded-lg p-4 shadow-lg z-50">
           <div className="flex items-start justify-between gap-3">
             <p className="text-sm sm:text-base text-white/90 leading-relaxed font-normal flex-1">
-              I don't collect cookies. No cookies for you! 🍪
+              {t('cookie.notice')}
             </p>
             <button
               onClick={dismissCookieNotice}
               className="text-white/60 hover:text-white focus:text-white focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-zinc-800 hover:scale-110 transform transition-all duration-200 text-xl leading-none min-w-[44px] min-h-[44px] flex items-center justify-center rounded-sm"
-              aria-label="Dismiss cookie notice"
+              aria-label={t('cookie.dismiss')}
             >
               ×
             </button>
           </div>
         </div>
       )}
+
+      <LanguageSwitcher />
     </main>
   )
 }
