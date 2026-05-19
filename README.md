@@ -1,1 +1,1 @@
-# sayganov.com
+# sayganov.com [![Deploy static content to Pages](https://github.com/sayganov/sayganov-com/actions/workflows/deploy-to-pages.yaml/badge.svg?branch=main)](https://github.com/sayganov/sayganov-com/actions/workflows/deploy-to-pages.yaml)
