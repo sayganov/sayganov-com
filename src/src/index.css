@@ -4,6 +4,28 @@ html {
   color-scheme: dark;
 }
 
+@keyframes cookie-banner-slide-up {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.cookie-banner-enter {
+  animation: cookie-banner-slide-up 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cookie-banner-enter {
+    animation-duration: 0.01ms;
+  }
+}
+
 body {
   font-family: 'JetBrains Mono', monospace;
   -webkit-font-smoothing: antialiased;
