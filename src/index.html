@@ -1,36 +1,36 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("consent", "default", { analytics_storage: "denied" });
-    </script>
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-T4RT53EHBP"
-    ></script>
-    <script>
-      gtag("js", new Date());
-      gtag("config", "G-T4RT53EHBP");
-    </script>
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#18181b" />
+
+    <!-- Google tag (gtag.js) -->
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('consent', 'default', { analytics_storage: 'denied' })
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T4RT53EHBP"></script>
+    <script>
+      gtag('js', new Date())
+      gtag('config', 'G-T4RT53EHBP')
+    </script>
+
+    <title>Georgy Sayganov</title>
     <meta
       name="description"
       content="Georgy Sayganov — Software Engineer. Connect on LinkedIn, GitHub, DEV, Instagram, or by email."
     />
     <meta name="author" content="Georgy Sayganov" />
+    <meta name="theme-color" content="#18181b" />
 
     <link rel="canonical" href="https://sayganov.com" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Georgy Sayganov" />
     <meta property="og:url" content="https://sayganov.com" />
     <meta property="og:title" content="Georgy Sayganov" />
     <meta
@@ -45,7 +45,21 @@
       content="Software Engineer. Connect on LinkedIn, GitHub, DEV, Instagram, or by email."
     />
 
-    <title>Georgy Sayganov</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Georgy Sayganov",
+        "jobTitle": "Software Engineer",
+        "url": "https://sayganov.com",
+        "sameAs": [
+          "https://www.linkedin.com/in/sayganov/",
+          "https://github.com/sayganov",
+          "https://dev.to/sayganov",
+          "https://www.instagram.com/sayganov/"
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

@@ -12,11 +12,40 @@ interface NavLink {
 }
 
 const NAV_LINKS: NavLink[] = [
-  { href: 'https://www.linkedin.com/in/sayganov/', label: 'LinkedIn', Icon: FaLinkedinIn, ariaLabel: 'LinkedIn profile', external: true },
-  { href: 'https://github.com/sayganov', label: 'GitHub', Icon: FaGithub, ariaLabel: 'GitHub profile', external: true },
-  { href: 'https://dev.to/sayganov', label: 'DEV', Icon: FaDev, ariaLabel: 'DEV profile', external: true },
-  { href: 'https://www.instagram.com/sayganov/', label: 'Instagram', Icon: FaInstagram, ariaLabel: 'Instagram profile', external: true },
-  { href: 'mailto:georgysay@gmail.com', label: 'Email', Icon: HiOutlineMail, ariaLabel: 'Email me' },
+  {
+    href: 'https://www.linkedin.com/in/sayganov/',
+    label: 'LinkedIn',
+    Icon: FaLinkedinIn,
+    ariaLabel: 'LinkedIn profile',
+    external: true,
+  },
+  {
+    href: 'https://github.com/sayganov',
+    label: 'GitHub',
+    Icon: FaGithub,
+    ariaLabel: 'GitHub profile',
+    external: true,
+  },
+  {
+    href: 'https://dev.to/sayganov',
+    label: 'DEV',
+    Icon: FaDev,
+    ariaLabel: 'DEV profile',
+    external: true,
+  },
+  {
+    href: 'https://www.instagram.com/sayganov/',
+    label: 'Instagram',
+    Icon: FaInstagram,
+    ariaLabel: 'Instagram profile',
+    external: true,
+  },
+  {
+    href: 'mailto:georgysay@gmail.com',
+    label: 'Email',
+    Icon: HiOutlineMail,
+    ariaLabel: 'Email me',
+  },
 ]
 
 const linkClass =
@@ -47,7 +76,10 @@ export default function App() {
               {label}
             </a>
             {i < NAV_LINKS.length - 1 && (
-              <span className="hidden select-none text-lg text-white/30 sm:block" aria-hidden="true">
+              <span
+                className="hidden select-none text-lg text-white/30 sm:block"
+                aria-hidden="true"
+              >
                 •
               </span>
             )}
