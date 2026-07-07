@@ -35,6 +35,18 @@ jobs:
         run: npm ci
         working-directory: ./src
 
+      - name: Lint
+        run: npm run lint
+        working-directory: ./src
+
+      - name: Check formatting
+        run: npm run format:check
+        working-directory: ./src
+
+      - name: Test
+        run: npm run test
+        working-directory: ./src
+
       - name: Build
         run: npm run build
         working-directory: ./src

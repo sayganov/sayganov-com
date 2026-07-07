@@ -4,10 +4,12 @@ import '@fontsource/jetbrains-mono/latin-400.css'
 import './index.css'
 import App from './App.tsx'
 import { CookieBanner } from './components/CookieBanner.tsx'
+import { ThemeToggle } from './components/ThemeToggle.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <App />
+    <ThemeToggle />
     <CookieBanner />
   </StrictMode>,
 )

@@ -24,10 +24,16 @@ npm run build    # type-check and build for production
 npm run preview  # preview the production build
 npm run lint     # lint with ESLint
 npm run format   # format with Prettier
+npm run test     # run the test suite once
 ```
+
+The Google Analytics measurement ID is read from `VITE_GA_MEASUREMENT_ID` (see
+[`.env.example`](./src/.env.example)); a default value is committed in `src/.env` since it's not
+a secret.
 
 ## Deployment
 
 Pushing to `main` triggers the
-[Deploy to Pages](./.github/workflows/deploy-to-pages.yaml) workflow, which builds the site
-and publishes it to GitHub Pages. The custom domain is configured via [`CNAME`](./CNAME).
+[Deploy to Pages](./.github/workflows/deploy-to-pages.yaml) workflow, which lints, checks
+formatting, runs tests, builds the site, and publishes it to GitHub Pages. The custom domain is
+configured via [`CNAME`](./CNAME).
