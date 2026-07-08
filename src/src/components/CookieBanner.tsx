@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react'
 import { useCookieConsent } from '../hooks/use-cookie-consent'
 
 const baseButtonClass =
-  'flex-1 sm:flex-initial inline-flex items-center justify-center whitespace-nowrap ' +
+  'flex-1 sm:flex-initial inline-flex min-h-[44px] items-center justify-center whitespace-nowrap ' +
   'px-5 py-2 text-sm font-medium rounded transition-colors cursor-pointer ' +
   'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900/40 ' +
   'focus-visible:ring-offset-2 focus-visible:ring-offset-white ' +
