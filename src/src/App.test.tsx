@@ -27,6 +27,10 @@ describe('App', () => {
       'href',
       'https://www.instagram.com/sayganov/',
     )
+    expect(screen.getByRole('link', { name: 'Telegram profile' })).toHaveAttribute(
+      'href',
+      'https://t.me/georgysay',
+    )
     expect(screen.getByRole('link', { name: 'Email me' })).toHaveAttribute(
       'href',
       'mailto:georgysay@gmail.com',

@@ -1,5 +1,5 @@
 import { Fragment } from 'react'
-import { FaLinkedinIn, FaGithub, FaDev, FaInstagram } from 'react-icons/fa'
+import { FaLinkedinIn, FaGithub, FaDev, FaInstagram, FaTelegramPlane } from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi'
 import type { IconType } from 'react-icons'
 
@@ -38,6 +38,13 @@ const NAV_LINKS: NavLink[] = [
     label: 'Instagram',
     Icon: FaInstagram,
     ariaLabel: 'Instagram profile',
+    external: true,
+  },
+  {
+    href: 'https://t.me/georgysay',
+    label: 'Telegram',
+    Icon: FaTelegramPlane,
+    ariaLabel: 'Telegram profile',
     external: true,
   },
   {
