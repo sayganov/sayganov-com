@@ -56,19 +56,24 @@ const NAV_LINKS: NavLink[] = [
 ]
 
 const linkClass =
-  'flex items-center justify-center gap-2 min-h-[44px] px-3 py-2 sm:px-2 sm:py-1 ' +
+  'flex items-center justify-center gap-2 min-h-11 px-3 py-2 sm:px-2 sm:py-1 ' +
   'text-base sm:text-lg font-medium tracking-wide ' +
-  'text-zinc-700 transition-colors duration-200 hover:text-zinc-900 ' +
+  'text-zinc-700 transition-colors hover:text-zinc-900 ' +
   'dark:text-white/90 dark:hover:text-white ' +
   'hover:underline underline-offset-4 decoration-2 ' +
-  'rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900/40 ' +
+  'rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900/40 ' +
   'focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-50 ' +
   'dark:focus-visible:ring-white/50 dark:focus-visible:ring-offset-zinc-900'
 
 export default function App() {
   return (
-    <main className="flex min-h-dvh w-full items-center justify-center bg-zinc-50 p-4 text-zinc-900 dark:bg-zinc-900 dark:text-white">
-      <h1 className="sr-only">Georgy Sayganov — Software Engineer</h1>
+    <main className="flex min-h-dvh w-full flex-col items-center justify-center gap-8 bg-zinc-50 p-4 text-zinc-900 sm:gap-10 dark:bg-zinc-900 dark:text-white">
+      <header className="flex flex-col items-center gap-2 text-center">
+        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Georgy Sayganov</h1>
+        <p className="text-sm tracking-wide text-zinc-500 sm:text-base dark:text-zinc-400">
+          Software Engineer
+        </p>
+      </header>
       <nav
         aria-label="Social links"
         className="flex flex-col items-center gap-2 sm:flex-row sm:gap-0 sm:space-x-2"

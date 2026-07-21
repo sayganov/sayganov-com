@@ -51,4 +51,17 @@ describe('CookieBanner', () => {
     render(<CookieBanner />)
     expect(screen.queryByRole('region', { name: 'Cookie consent' })).not.toBeInTheDocument()
   })
+
+  it('dismisses the banner and denies consent when Escape is pressed', async () => {
+    const user = userEvent.setup()
+    render(<CookieBanner />)
+
+    await user.keyboard('{Escape}')
+
+    expect(screen.queryByRole('region', { name: 'Cookie consent' })).not.toBeInTheDocument()
+    expect(localStorage.getItem('cookie-consent')).toBe('rejected')
+    expect(getGtagMock()).toHaveBeenCalledWith('consent', 'update', {
+      analytics_storage: 'denied',
+    })
+  })
 })

@@ -8,6 +8,11 @@ describe('App', () => {
     expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Georgy Sayganov')
   })
 
+  it('renders the role tagline', () => {
+    render(<App />)
+    expect(screen.getByText('Software Engineer')).toBeInTheDocument()
+  })
+
   it('renders all social links with correct destinations', () => {
     render(<App />)
 
