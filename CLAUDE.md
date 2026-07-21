@@ -42,8 +42,12 @@ CSS v4). There is no router and no backend — `App.tsx` renders one screen of s
     decides.
   - Components (`ThemeToggle`, `CookieBanner`) are thin — they just call the hook and render.
 - **Theme flash prevention**: `index.html` has an inline pre-hydration `<script>` that reads
-  `localStorage`/`matchMedia` and adds the `dark` class before first paint. Any change to the
-  theme storage key or logic in `use-theme.ts` must be mirrored there.
+  `localStorage`/`matchMedia` and adds the `dark` class before first paint. It also syncs the
+  `theme-color` meta tag (must appear in the HTML *before* this script, so `querySelector` can find
+  it) to keep iOS/Android safe-area and browser-chrome coloring correct. Any change to the theme
+  storage key or logic in `use-theme.ts` — including the `theme-color`/background sync in
+  `applyTheme` and the matching `html`/`html.dark` background-color and color-scheme rules in
+  `index.css` — must be mirrored in the pre-hydration script.
 - **Analytics / consent**: `index.html` bootstraps `gtag.js` with `consent: 'default'` set to
   `analytics_storage: denied`. The Google Analytics ID is injected via the `%VITE_GA_MEASUREMENT_ID%`
   Vite HTML env placeholder, sourced from `VITE_GA_MEASUREMENT_ID` (defaulted in the committed

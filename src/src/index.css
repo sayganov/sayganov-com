@@ -2,7 +2,13 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 html {
-  color-scheme: light dark;
+  color-scheme: light;
+  background-color: #fafafa; /* zinc-50, matches <main>'s light background */
+}
+
+html.dark {
+  color-scheme: dark;
+  background-color: #18181b; /* zinc-900, matches <main>'s dark background */
 }
 
 @keyframes cookie-banner-slide-up {

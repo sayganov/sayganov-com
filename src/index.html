@@ -2,9 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#18181b" />
 
-    <!-- Applies the persisted/system theme before first paint to avoid a flash of the wrong theme. -->
+    <!-- Applies the persisted/system theme before first paint to avoid a flash of the wrong theme.
+         Must run after the theme-color meta tag above so it can be found and updated in place. -->
     <script>
       ;(function () {
         try {
@@ -16,6 +18,8 @@
                 ? 'dark'
                 : 'light'
           if (theme === 'dark') document.documentElement.classList.add('dark')
+          var meta = document.querySelector('meta[name="theme-color"]')
+          if (meta) meta.setAttribute('content', theme === 'dark' ? '#18181b' : '#fafafa')
         } catch (e) {
           // localStorage/matchMedia unavailable; default light theme applies
         }
@@ -45,7 +49,6 @@
       content="Georgy Sayganov — Software Engineer. Connect on LinkedIn, GitHub, DEV, Instagram, Telegram, or by email."
     />
     <meta name="author" content="Georgy Sayganov" />
-    <meta name="theme-color" content="#18181b" />
 
     <link rel="canonical" href="https://sayganov.com" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
